@@ -1,0 +1,14 @@
+{
+  "name": "ecma",
+  "version": "1.0.0",
+  "description": "Simple ECMA script primer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Todd Sharp",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
