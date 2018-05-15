@@ -8,12 +8,5 @@ async function a() {
     return result;
 }
 
-window.addEventListener('load', function(){
-    console.log('load')
-    document.querySelector('#clicky').addEventListener('click', function(){
-        console.log('hi')
-        const r = a();
-        console.log(r);
-    });
-});
+a();
    
