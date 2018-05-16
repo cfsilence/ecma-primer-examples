@@ -1,25 +1,33 @@
-async function showAvatar() {
-    let githubResponse = await fetch(`https://api.github.com/users/cfsilence`);
-    let githubUser = await githubResponse.json();
-  
-    // show the avatar
-    let img = document.createElement('img');
-    img.src = githubUser.avatar_url;
-    img.className = "promise-avatar-example";
-    document.body.append(img);
-  
-    // wait 3 seconds
-    await new Promise((resolve, reject) => setTimeout(resolve, 3000));
-  
-    img.remove();
-  
-    return githubUser;
+function showAvatarPromises() {
+    fetch(`https://api.github.com/users/cfsilence`)
+        .then( response => response.json() )
+        .then( userData => {
+            console.log(userData);
+            fetch(`https://api.github.com/users/${userData.login}/gists`)
+                .then( response => response.json() )
+                .then( data => {
+                    console.log(data);
+                });
+        })
+}
+
+async function showAvatarAsync() {
+    const githubResponse = await fetch(`https://api.github.com/users/cfsilence`);
+    const githubUser = await githubResponse.json();
+
+    console.log(githubUser);
+
+    const gists = await fetch(`https://api.github.com/users/${githubUser.login}/gists`);
+    const gistResults = await gists.json();
+    
+    console.log(gistResults);
 }
 
 window.addEventListener('load', function(){
-    document.querySelector('#clicky').addEventListener('click', function(){
-        showAvatar().then( result => {
-            console.log(result)
-        });
+    document.querySelector('#clicky1').addEventListener('click', function(){
+        showAvatarAsync();
+    });
+    document.querySelector('#clicky2').addEventListener('click', function(){
+        showAvatarPromises();
     });
 });

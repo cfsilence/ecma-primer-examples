@@ -7,6 +7,6 @@ export class Conference {
     }
 
     value() {
-        return this.contentRating / this.cost;
+        return this.cost * this.contentRating;
     }
 }
