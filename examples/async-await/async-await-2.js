@@ -1,39 +1,43 @@
 function showAvatarPromises() {
-    fetch(`https://api.github.com/users/cfsilence`)
+    fetch(`/examples/data/users.json`)
         .then( response => response.json() )
         .then( userData => {
             console.log(userData);
-            fetch(`https://api.github.com/users/${userData.login}/gists`)
-                .then( response => response.json() )
-                .then( data => {
-                    console.log(data);
+            const todd = userData.find( it => it.name === 'Todd Sharp' );
+
+            fetch(`/examples/data/languages-${todd.id}.json`)
+                .then( languages => languages.json() )
+                .then( languages => {
+                    console.log(languages);
                 });
         })
 }
 
 function slightlyCleanerPromises() {
-    fetch(`https://api.github.com/users/cfsilence`)
+    fetch(`/examples/data/users.json`)
         .then( response => response.json() )
         .then( userData => {
             console.log(userData);
-            return fetch(`https://api.github.com/users/${userData.login}/gists`)
+            const todd = userData.find( it => it.name === 'Todd Sharp' );
+            return fetch(`/examples/data/languages-${todd.id}.json`)
         })
-        .then( response => response.json() )
-        .then( data => {
-            console.log(data);
+        .then( languages => languages.json() )
+        .then( languages => {
+            console.log(languages);
         });
 }
 
 async function showAvatarAsync() {
-    const githubResponse = await fetch(`https://api.github.com/users/cfsilence`);
-    const githubUser = await githubResponse.json();
+    const userResponse = await fetch(`/examples/data/users.json`);
+    const users = await userResponse.json();
 
-    console.log(githubUser);
+    console.log(users);
+    const todd = users.find( it => it.name === 'Todd Sharp' );
 
-    const gists = await fetch(`https://api.github.com/users/${githubUser.login}/gists`);
-    const gistResults = await gists.json();
+    const languageResults = await fetch(`/examples/data/languages-${todd.id}.json`);
+    const languages = await languageResults.json();
     
-    console.log(gistResults);
+    console.log(languages);
 }
 
 window.addEventListener('load', function(){
