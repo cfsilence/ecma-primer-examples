@@ -34,8 +34,11 @@ console.log(user2);
     property value shorthands
     which is a compile time 
     syntactic enhancement
+
+    IE: this will fail:
+    
+    const someArr = [1,2,3];
+    const user3 = {
+        [someArr]
+    };
 */ 
-const someArr = [1,2,3];
-const user3 = {
-    [someArr]
-};

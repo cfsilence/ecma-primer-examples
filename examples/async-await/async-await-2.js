@@ -11,6 +11,19 @@ function showAvatarPromises() {
         })
 }
 
+function slightlyCleanerPromises() {
+    fetch(`https://api.github.com/users/cfsilence`)
+        .then( response => response.json() )
+        .then( userData => {
+            console.log(userData);
+            return fetch(`https://api.github.com/users/${userData.login}/gists`)
+        })
+        .then( response => response.json() )
+        .then( data => {
+            console.log(data);
+        });
+}
+
 async function showAvatarAsync() {
     const githubResponse = await fetch(`https://api.github.com/users/cfsilence`);
     const githubUser = await githubResponse.json();
@@ -29,5 +42,8 @@ window.addEventListener('load', function(){
     });
     document.querySelector('#clicky2').addEventListener('click', function(){
         showAvatarPromises();
+    });
+    document.querySelector('#clicky3').addEventListener('click', function(){
+        slightlyCleanerPromises();
     });
 });

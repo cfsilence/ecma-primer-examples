@@ -19,6 +19,6 @@ class SuperArray extends Array {
 }
 
 const example = new SuperArray(100,150,200,1000)
-console.log( 'median->', example.median() );
-console.log( 'min->', example.min() );
-console.log( 'max->', example.max() );
+console.log( 'median-->', example.median() );
+console.log( 'min-->', example.min() );
+console.log( 'max-->', example.max() );

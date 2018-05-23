@@ -88,6 +88,6 @@ for( let i=1; i<36; i++) {
     console.log( `strike ${i}-->`, knight.absorbDamage( warrior.strike() ) );
 }
 
-console.log( 'isAlive->', knight.isAlive() );
+console.log( 'isAlive-->', knight.isAlive() );
 console.log( warrior.battlecry() );
 
