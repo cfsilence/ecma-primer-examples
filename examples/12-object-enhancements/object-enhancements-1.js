@@ -4,13 +4,13 @@ var data = require('./object-data.js');
 const newObj = {isCool: true};
 console.log('newObj-->', newObj);
 console.log('obj1-->', data.obj1);
-const merged = Object.assign( data.obj1, newObj);
+const merged = Object.assign({}, data.obj1, newObj);
 console.log('assign-->', merged);
 
 /* Object.entries() */
 /* Returns an array containing all of the [key, value] pairs */
 var data = require('./object-data.js');
-Object.entries(data.obj1).forEach( (key, value) => {
+Object.entries(data.obj1).forEach( ([key, value]) => {
     console.log(`key: ${key}, value: ${value}`);
 });
 
