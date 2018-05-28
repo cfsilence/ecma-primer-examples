@@ -1,4 +1,13 @@
 if (true) {
     let a = 'a';
-    let a = 'b'; // SyntaxError thrown.
+    console.log(a);
+    let a = 'b';
+    console.log(a);
+}
+
+if(true) {
+    var x = 'a';
+    console.log(x);
+    var x = 'b';
+    console.log(x);
 }
