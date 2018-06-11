@@ -28,6 +28,6 @@ class Test {
 }
 
 const t = new Test(1, 2);
-t.good();
-t.workaround();
 t.bad();
+t.workaround();
+t.good();
