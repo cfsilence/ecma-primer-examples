@@ -1,9 +1,12 @@
 /* Map */
 const m = new Map();
-m.set('key', 'value');
+m.set('key', 'string key');
 
 const arr = [1,2,3];
-m.set(arr, 'another value')
+m.set(arr, 'array key')
+const obj = {foo: 'bar'};
+m.set(obj, 'object key');
+
 console.log('map-->', m);
 console.log('check key exists-->', m.has(arr));
 console.log('get a value by key-->', m.get('key'));

@@ -1,7 +1,7 @@
 const todd = {id: 1, name: 'Todd', charisma: 99};
 
 const data = {
-    todd: todd,
+    todd,
     arr1: [1,2,3],
     arr2: [
         todd,

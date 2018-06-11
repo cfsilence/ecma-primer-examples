@@ -5,6 +5,10 @@ window.addEventListener('load', function(){
         let users = [];
 
         fetch('/examples/data/users.json')
+            .then( response => {
+                console.log(response);
+                return response;
+            })
             .then( response => response.json() )
             .then( data => {
                 users = data;
