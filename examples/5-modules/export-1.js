@@ -1,12 +1,12 @@
 export class Conference {
-    constructor(name, attendees, cost, contentRating) {
-        this.name = name;
-        this.attendees = attendees;
-        this.cost = cost;
-        this.contentRating = contentRating;
-    }
+  constructor(name, attendees, cost, contentRating) {
+    this.name = name;
+    this.attendees = attendees;
+    this.cost = cost;
+    this.contentRating = contentRating;
+  }
 
-    value() {
-        return this.cost * this.contentRating;
-    }
+  value() {
+    return this.cost * this.contentRating;
+  }
 }
