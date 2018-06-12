@@ -1,6 +1,6 @@
 /*
-    variables defined with let cannot
-    be redeclared within the same block
+  variables defined with let cannot
+  be redeclared within the same block
 */
 if (true) {
   let a = 'a';
@@ -10,8 +10,8 @@ if (true) {
 }
 
 /*
-    variables defined with var can
-    be redeclared
+  variables defined with var can
+  be redeclared
 */
 if(true) {
   var x = 'a';

@@ -9,8 +9,8 @@ data.arr2.forEach( (item, index, array) => {
 
 /* Array.prototype.includes() */
 /* 
-    Determines whether an array contains a certain element, 
-    returning true or false as appropriate 
+  Determines whether an array contains a certain element, 
+  returning true or false as appropriate 
 */
 var data = require('./array-data.js');
 console.log( 'includes 1-->', data.arr1.includes(1) );
@@ -20,8 +20,8 @@ console.log( 'includes ring-->', data.arr3.includes('ring') );
 
 /* Array.prototype.findIndex() */
 /* 
-    Returns the found index in the array, if an element in the 
-    array satisfies the provided testing function or -1 if not found. 
+  Returns the found index in the array, if an element in the 
+  array satisfies the provided testing function or -1 if not found. 
 */
 var data = require('./array-data.js');
 console.log( 'findIndex-->', data.arr2.findIndex( it => {
@@ -30,12 +30,12 @@ console.log( 'findIndex-->', data.arr2.findIndex( it => {
 
 /* Array.prototype.find() && filter() */
 /* 
-    find(): Returns the found value in the array, if an element in the array 
-    satisfies the provided testing function or undefined if not found.
+  find(): Returns the found value in the array, if an element in the array 
+  satisfies the provided testing function or undefined if not found.
 */
 /* 
-    filter(): Creates a new array with all of the elements of this 
-    array for which the provided filtering function returns true. 
+  filter(): Creates a new array with all of the elements of this 
+  array for which the provided filtering function returns true. 
 */
 var data = require('./array-data.js');
 console.log( 'find-->', data.arr2.find( it => {
@@ -70,8 +70,8 @@ console.log( 'map-->', data.arr2.map( it => {
 
 /* Array.prototype.reduce() */
 /* 
-    Apply a function against an accumulator and each value of the array 
-    (from left-to-right) as to reduce it to a single value.
+  Apply a function against an accumulator and each value of the array 
+  (from left-to-right) as to reduce it to a single value.
 */
 var data = require('./array-data.js');
 console.log( 'reduce-->', data.arr1.reduce( (a, b) => {
