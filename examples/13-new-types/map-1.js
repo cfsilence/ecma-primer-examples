@@ -3,7 +3,7 @@ const m = new Map();
 m.set('key', 'string key');
 
 const arr = [1,2,3];
-m.set(arr, 'array key')
+m.set(arr, 'array key');
 const obj = {foo: 'bar'};
 m.set(obj, 'object key');
 
@@ -22,5 +22,5 @@ m.set('key2', 'value2');
 m.set('key3', 'value3');
 
 m.forEach((value, key) => {
-    console.log(`${key} = ${value}`);
-})
+  console.log(`${key} = ${value}`);
+});

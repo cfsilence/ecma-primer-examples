@@ -5,7 +5,7 @@
 console.log( func1(1) );
 
 function func1(n){
-    return n;
+  return n;
 }
 
 /*
@@ -14,7 +14,7 @@ function func1(n){
 console.log( new Clazz(1) );
 
 class Clazz {
-    constructor(n) {
-        this.n = n;
-    }
+  constructor(n) {
+    this.n = n;
+  }
 }

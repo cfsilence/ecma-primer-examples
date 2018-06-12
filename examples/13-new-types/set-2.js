@@ -12,5 +12,5 @@ console.log(s);
 
 let i = 0;
 s.forEach( (value) => {
-    console.log(`${i++}-->`, value);
-})
+  console.log(`${i++}-->`, value);
+});

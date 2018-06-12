@@ -14,7 +14,7 @@ console.log('assign-->', merged);
 /* Returns an array containing all of the [key, value] pairs */
 var data = require('./object-data.js');
 Object.entries(data.obj1).forEach( ([key, value]) => {
-    console.log(`key: ${key}, value: ${value}`);
+  console.log(`key: ${key}, value: ${value}`);
 });
 
 /* Object.keys() */

@@ -2,10 +2,10 @@
 const language = 'javascript';
 
 const user = {
-    name: 'Todd Sharp',
-    city: 'Blairsville',
-    state: 'GA'
-}
+  name: 'Todd Sharp',
+  city: 'Blairsville',
+  state: 'GA'
+};
 
 user[language] = 'fun!';
 
@@ -19,10 +19,10 @@ console.log(user);
 */
 
 const user2 = {
-    name: 'Todd Sharp',
-    city: 'Blairsville',
-    state: 'GA',
-    [language]: 'fun!',
+  name: 'Todd Sharp',
+  city: 'Blairsville',
+  state: 'GA',
+  [language]: 'fun!',
 }
 
 console.log(user2);

@@ -1,10 +1,10 @@
 /* Array.prototype.forEach() */
 var data = require('./array-data.js');
 data.arr1.forEach( (item, index, array) => {
-    console.log( 'item_num-->', index, 'item-->', item, 'array-->', array);
+  console.log( 'item_num-->', index, 'item-->', item, 'array-->', array);
 });
 data.arr2.forEach( (item, index, array) => {
-    console.log( 'item_num-->', index, 'item-->', item);
+  console.log( 'item_num-->', index, 'item-->', item);
 });
 
 /* Array.prototype.includes() */
@@ -25,7 +25,7 @@ console.log( 'includes ring-->', data.arr3.includes('ring') );
 */
 var data = require('./array-data.js');
 console.log( 'findIndex-->', data.arr2.findIndex( it => {
-    return it.id === 1;
+  return it.id === 1;
 }) );
 
 /* Array.prototype.find() && filter() */
@@ -39,33 +39,33 @@ console.log( 'findIndex-->', data.arr2.findIndex( it => {
 */
 var data = require('./array-data.js');
 console.log( 'find-->', data.arr2.find( it => {
-    /* returns FIRST element that satisfies condition */
-    return it.charisma > 95;
+  /* returns FIRST element that satisfies condition */
+  return it.charisma > 95;
 }) );
 console.log( 'filter-->', data.arr2.filter( it => {
-    /* returns ALL elements that satisfies condition */
-    return it.charisma > 95;
+  /* returns ALL elements that satisfies condition */
+  return it.charisma > 95;
 }) );
 
 /* Array.prototype.every() */
 /* returns boolean indicating whether elements satisfy condition */
 var data = require('./array-data.js');
 console.log( 'every-->', data.arr2.every( it => {
-    return it.charisma > 95;
+  return it.charisma > 95;
 }) );
 
 /* Array.prototype.map() */
 /* returns new array containing elements returned */
 var data = require('./array-data.js');
 console.log( 'map-->', data.arr2.map( it => {
-    return {id: it.id, name: it.name};
+  return {id: it.id, name: it.name};
 }) );
 /* NOTE: map() returns for EVERY element, use filter or forEach to exclude! */
 console.log( 'map-->', data.arr2.map( it => {
-    /* doesn't do what you might think! */
-    if( it.id > 2 ) {
-        return it.id
-    }
+  /* doesn't do what you might think! */
+  if( it.id > 2 ) {
+    return it.id;
+  }
 }) );
 
 /* Array.prototype.reduce() */
@@ -75,5 +75,5 @@ console.log( 'map-->', data.arr2.map( it => {
 */
 var data = require('./array-data.js');
 console.log( 'reduce-->', data.arr1.reduce( (a, b) => {
-    return a + b;
+  return a + b;
 }, 0));
