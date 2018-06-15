@@ -13,13 +13,13 @@ const p1 = new Promise(function(resolve, reject) {
 }); 
 const p2 = new Promise(function(resolve, reject) {
   setTimeout(() => {
-    console.log('p2 is done...')
+    console.log('p2 is done...');
     resolve('bar');
   }, 100);
 }); 
 
-Promise.all([p1, p2]).then( result => {
-  console.log('p1 and p2 are done', result);
+Promise.all([p1, p2]).then( ([p1,p2]) => {
+  console.log('p1 and p2 are done', p1, p2);
 });
 
 /* Promise catch */

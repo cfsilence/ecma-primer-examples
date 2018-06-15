@@ -21,8 +21,8 @@ window.addEventListener('load', function(){
 
   document.querySelector('#clicky2').addEventListener('click', function(){
       
-    const starWars = fetch('/examples/data/star-wars.json')
-    const bourne = fetch('/examples/data/bourne.json')
+    const starWars = fetch('/examples/data/star-wars.json');
+    const bourne = fetch('/examples/data/bourne.json');
 
     Promise.all([starWars, bourne])
       .then(resp => {

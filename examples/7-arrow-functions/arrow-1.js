@@ -1,16 +1,15 @@
-// simplified function
+// no arguments, implied 'return' keyword
 const a = () => 'foo';
 console.log( a() );
 
-// single argument, implied 'return'
+// single argument, implied 'return' keyword
 const b = name => `Hello, ${name}`;
 console.log( b('Todd') );
 
-// multi arg, complex return
-const add = (...args) => {
-  return args.reduce( (previous, current) => {
-    return previous + current;
-  }, 0);
+// multiple arguments, complex return
+const c = (name, age) => {
+  const isOfAge = age > 20;
+  return `${name} may${!isOfAge ? ' not' : ''} purchase alcohol!`;
 };
-console.log( add(1,2,3,4) );
-console.log( add() );
+console.log( c( 'Todd', 41 ) );
+console.log( c( 'Dominic', 10 ) );

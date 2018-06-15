@@ -17,6 +17,7 @@ class Character {
       return 0;
     }
     this.health = this.health - damage;
+    if( this.health < 0 ) this.health = 0;
     return this.health;
   }
 
@@ -30,6 +31,11 @@ class Character {
 }
 
 const char = new Character();
-console.log(char);
+console.log( char );
 console.log( char.absorbDamage(5) );
 console.log( char.isAlive() );
+
+const weakChar = new Character(50,50,100);
+console.log( weakChar );
+console.log( weakChar.absorbDamage(51) );
+console.log( weakChar.isAlive() );

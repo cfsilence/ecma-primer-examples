@@ -13,13 +13,13 @@ function showAvatarPromises() {
     });
 }
 
-function slightlyCleanerPromises() {
-  fetch(`/examples/data/users.json`)
+function cleanerPromises() {
+  fetch('/examples/data/users.json')
     .then( response => response.json() )
     .then( userData => {
       console.log(userData);
       const todd = userData.find( it => it.name === 'Todd Sharp' );
-      return fetch(`/examples/data/languages-${todd.id}.json`)
+      return fetch(`/examples/data/languages-${todd.id}.json`);
     })
     .then( languages => languages.json() )
     .then( languages => {
@@ -48,6 +48,6 @@ window.addEventListener('load', function(){
     showAvatarPromises();
   });
   document.querySelector('#clicky3').addEventListener('click', function(){
-    slightlyCleanerPromises();
+    cleanerPromises();
   });
 });

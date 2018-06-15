@@ -1,5 +1,5 @@
 /* old way */
-const language = 'javascript';
+let language = 'javascript';
 
 const user = {
   name: 'Todd Sharp',
@@ -17,13 +17,14 @@ console.log(user);
     object literal 
     declaration
 */
+let language2 = 'typescript';
 
 const user2 = {
   name: 'Todd Sharp',
   city: 'Blairsville',
   state: 'GA',
-  [language]: 'fun!',
-}
+  [language2]: 'fun!',
+};
 
 console.log(user2);
 
