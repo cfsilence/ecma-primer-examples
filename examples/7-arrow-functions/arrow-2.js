@@ -9,20 +9,20 @@ class Test {
 
   bad() {
     setTimeout( function() {
-      console.log( {a: this.a, b: this.b} );
+      console.log( 'bad-->', {a: this.a, b: this.b} );
     }, 250);
   }
 
   workaround() {
     const self = this;
     setTimeout( function(){
-      console.log( {a: self.a, b: self.b} );
+      console.log( 'workaround-->', {a: self.a, b: self.b} );
     }, 250);
   }
 
   good() {
     setTimeout( () => {
-      console.log( {a: this.a, b: this.b} );
+      console.log( 'good-->', {a: this.a, b: this.b} );
     }, 250);
   }
 }
