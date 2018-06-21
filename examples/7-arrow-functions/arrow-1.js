@@ -8,8 +8,8 @@ console.log( b('Todd') );
 
 // multiple arguments, complex return
 const c = (name, age) => {
-  const isOfAge = age > 20;
-  return `${name} may${!isOfAge ? ' not' : ''} purchase alcohol!`;
+  const isOfAge = age > 18;
+  return `${name} can${!isOfAge ? ' not' : ''} vote!`;
 };
 console.log( c( 'Todd', 41 ) );
 console.log( c( 'Dominic', 10 ) );

@@ -1,93 +1,60 @@
-class Character {
+class Animal {
     
-  constructor(health, strength, experience) {
-    this.health = health || 100;
-    this.strength = strength || 100;
-    this.experience = experience || 100;
+  constructor(hasFur, hasPaws, numFeet=4) {
+    this.hasFur = hasFur;
+    this.hasPaws = hasPaws;
+    this.numFeet = numFeet
   }
 
-  /* how much damage should a strike do */
-  strike() {
-    return 1;
+  speak() {
+    return '';
   }
 
-  /* an enemy has struck us */
-  absorbDamage(damage) {
-    if( !this.isAlive() ) {
-      return 0;
-    }
-    this.health = this.health - damage;
-    return this.health;
+}
+
+class Pig extends Animal {
+
+  constructor(hasFur, hasPaws, numFeet=4, hasHooves) {
+    super(hasFur, hasPaws, numFeet);
+    this.hasHooves = hasHooves;
   }
 
-  isAlive() {
-    return this.health > 0;
-  }
-
-  battlecry() {
-    return 'For great justice!';
+  speak() {
+    return 'huff';
   }
 }
 
-class Warrior extends Character {
-    
-  constructor(health, strength, experience) {
-    super(health, strength, experience);
-    this.damageModifier = 4;
+const p = new Pig(false, false, 4, true);
+console.log( 'piggy-->', p, p.speak() );
+
+class Chicken extends Animal {
+  
+  constructor(hasFur, hasPaws, numFeet=4, hasComb, hasWaddle, hasFeathers) {
+    super(hasFur, hasPaws, numFeet);
+    this.hasComb = hasComb;
+    this.hasWaddle = hasWaddle;
+    this.hasFeathers = hasFeathers;
   }
 
-  strike() {
-    return 1 * this.damageModifier;
-  }
-
-  battlecry() {
-    return 'I am a mighty warrior!!';
-  }
-}
-
-class Knight extends Character {
-
-  constructor(health, strength, experience) {
-    super(health, strength, experience);
-    this.damageModifier = 2;
-    this.armorModifier = 2;
-    this.armorHealth = 10;
-  }
-
-  strike() {
-    return 1 * this.damageModifier;
-  }
-
-  absorbDamage(damage) {
-    if( !this.isAlive() ) {
-      return 0;
-    }
-    const strike = ( damage - ( this.armorHealth > 0 ? this.armorModifier : 0 ) );
-    this.health = this.health - ( strike > 0 ? strike : 0 );
-    this.armorHealth = this.armorHealth > 0 ? this.armorHealth - 1 : 0;
-    return this.health;
-  }
-
-  drinkPotion() {
-    this.armorHealth = 10;
+  speak() {
+    return 'bawk';
   }
 }
 
-const knight = new Knight();
-const warrior = new Warrior();
+const c = new Chicken(false, false, 2, true, true, true);
+console.log( 'chicken-->', c, c.speak() );
 
-console.log( warrior );
-console.log( knight );
+class Dog extends Animal {
 
-console.log( knight.battlecry() );
-
-for( let i=1; i<36; i++) {
-  if( i === 16 ) {
-    knight.drinkPotion();
+  constructor(hasFur, hasPaws, numFeet=4, hasTail) {
+    super(hasFur, hasPaws, numFeet);
+    this.hasTail = hasTail;
   }
-  console.log( `strike ${i}-->`, knight.absorbDamage( warrior.strike() ) );
+
+  speak() {
+    return 'woof';
+  }
 }
 
-console.log( 'isAlive-->', knight.isAlive() );
-console.log( warrior.battlecry() );
-
+const d = new Dog(true, true, 4, true);
+console.log( 'dog-->', d, d.speak() );

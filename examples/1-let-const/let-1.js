@@ -7,7 +7,7 @@ a = 'goodbye!';
 console.log(a);
 
 /* 
-  fails on line 17 because we're trying to 
+  fails on line 21 because we're trying to 
   access a variable defined outside of the 
   current block (it is assigned in a sub block) 
 */
