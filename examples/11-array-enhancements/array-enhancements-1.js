@@ -60,7 +60,7 @@ var data = require('./array-data.js');
 console.log( 'map-->', data.arr2.map( it => {
   return {id: it.id, name: it.name};
 }) );
-/* NOTE: map() returns for EVERY element, use filter or forEach to exclude! */
+/* NOTE: map() returns for EVERY element, use filter to exclude! */
 console.log( 'map-->', data.arr2.map( it => {
   /* doesn't do what you might think! */
   if( it.id > 2 ) {
