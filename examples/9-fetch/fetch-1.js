@@ -4,18 +4,18 @@ window.addEventListener('load', function(){
       
     let users = [];
 
-    fetch('/examples/data/users.json')
+    const req = new Request('/examples/data/users.json');
+    fetch(req)
       .then( response => {
-        console.log(response);
+        console.log('response-->', response);
         return response;
       })
       .then( response => response.json() )
       .then( data => {
         users = data;
-        console.log('fetch result-->', data);
+        console.log('parsed result-->', data);
       });
-    
-    console.log('users-->', users);
+    console.log('request-->', req);
       
   });
 

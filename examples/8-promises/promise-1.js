@@ -5,6 +5,12 @@ const iceCreamPromise = new Promise( function(resolve, reject) {
 
 console.log(iceCreamPromise);
 
+/* 
+  then()...
+  returns a new promise resolving to the return value of 
+  the called handler, or to its original settled value 
+  if the promise was not handled
+*/
 iceCreamPromise.then( result => {
   console.log(result);
 });

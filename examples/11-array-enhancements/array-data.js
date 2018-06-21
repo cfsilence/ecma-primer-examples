@@ -1,4 +1,4 @@
-const todd = {id: 1, name: 'Todd', charisma: 99};
+const todd = {id: 1, name: 'Todd', charisma: 90};
 
 const data = {
   todd,
