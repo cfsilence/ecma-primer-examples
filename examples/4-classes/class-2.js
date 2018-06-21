@@ -3,7 +3,7 @@ class Animal {
   constructor(hasFur, hasPaws, numFeet=4) {
     this.hasFur = hasFur;
     this.hasPaws = hasPaws;
-    this.numFeet = numFeet
+    this.numFeet = numFeet;
   }
 
   speak() {
