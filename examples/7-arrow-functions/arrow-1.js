@@ -3,7 +3,7 @@ const a = () => 'foo';
 console.log( a() );
 
 // single argument, implied 'return' keyword
-const b = name => `Hello, ${name}`;
+const b = (name) => `Hello, ${name}`;
 console.log( b('Todd') );
 
 // multiple arguments, complex return
